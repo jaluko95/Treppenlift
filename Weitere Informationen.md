@@ -20,3 +20,6 @@ Zum entprellen der Taster wurde der integrierte PullUp-Widerstand verwendet.
 Zur Erkennung ob der Lift bereits an einer der Enden angekommen ist, sind unterhalb des Lifts drei Taster mit Rollenhebel verbaut. Diese Rollen knapp oberhalb
 der Schiene und werden am Ende des Weges über eine auf der Schiene befestigten Rampe, betätigt. Hierbei entfällt jeweils ein Taster für die Enden 
 und ein Dritter für einen eventuellen Notstop - dieser unterbricht über ein Relais (unabhängig des RPi's) den Stromkreis zwischen Akku und Motor. 
+
+Zur Verhinderung von Spannungsspitzen und eines unangenehmen Rucks wurde für den Normalfall ein sanfter Start/ Stop programmiert. 
+Für eventuell auftretende Spannungsspitzen beim sofortigen Stop, schließt eine Diode an den Polen der H-Brücken den Stromkreis kurz. Darüber kann sich die Spannung über die Motorwicklung abbauen und zerstört nicht die H-Brücken. 
