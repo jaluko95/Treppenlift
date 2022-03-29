@@ -37,7 +37,7 @@ try:
 	GPIO.setup(drehanschlag_rechts, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
 		
 	sensoren = 25# 3,3V wenn weg frei. 0V wenn Taster betaetigt
-	GPIO.setup(sensoren, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+	GPIO.setup(sensoren, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 	
 	sound = 17 #High = standby
 	GPIO.setup(sound, GPIO.OUT)
@@ -55,8 +55,8 @@ try:
 
 	schalter_hoch = 24 #NO
 	schalter_runter = 9
-	GPIO.setup(schalter_hoch, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
-	GPIO.setup(schalter_runter, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+	GPIO.setup(schalter_hoch, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+	GPIO.setup(schalter_runter, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 	
 	def beep():
 		GPIO.output(buzzer, GPIO.HIGH)
